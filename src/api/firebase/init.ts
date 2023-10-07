@@ -1,6 +1,5 @@
 import firebase from '@react-native-firebase/app';
 import {Platform} from 'react-native';
-// import {Platform} from 'react-native';
 
 const androidCredentials = {
   clientId: '',
@@ -24,16 +23,16 @@ const iosCredentials = {
   projectId: '',
 };
 
-// // Select the relevant credentials
-
-// const config = {
-//   name: 'SECONDARY_APP',
-// };
-
+// Firebaseアプリの初期化
 export const initializeFirebase = async () => {
+  if (firebase.apps.length > 0) {
+    return;
+  }
+
   const credentials = Platform.select({
     android: androidCredentials,
     ios: iosCredentials,
   });
-  await firebase.initializeApp(credentials || androidCredentials);
+
+  return await firebase.initializeApp(credentials || androidCredentials);
 };
