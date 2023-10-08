@@ -4,6 +4,7 @@ import {SettingsPage} from '../../pages/Settings';
 import {HomePage} from '../../pages/Home';
 import {LoginPage} from '../../pages/Login';
 import {SignUpPage} from '../../pages/SignUp';
+import {ChatPage} from '../../pages/Chat';
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>();
 
@@ -12,6 +13,7 @@ export type RootRoutesParamList = {
   DetailPage: undefined;
   LoginPage: undefined;
   SignUpPage: undefined;
+  ChatPage: undefined;
 };
 
 export const RootRoutes = () => {
@@ -36,6 +38,11 @@ export const RootRoutes = () => {
         component={SignUpPage}
         name="SignUpPage"
         options={{title: 'SignUp'}}
+      />
+      <Stack.Screen
+        component={ChatPage}
+        name="ChatPage"
+        options={{title: 'Chat'}}
       />
     </Stack.Navigator>
   );
