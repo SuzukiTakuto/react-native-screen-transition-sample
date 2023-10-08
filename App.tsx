@@ -5,9 +5,9 @@
  * @format
  */
 
-import React from 'react';
 import {RootRoutes} from './src/routes/Root';
 import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
 
 function App(): JSX.Element {
