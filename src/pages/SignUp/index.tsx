@@ -34,6 +34,14 @@ export const SignUpPage: FC<Props> = ({navigation}) => {
           console.log('That email address is invalid!');
         }
 
+        if (error.code === AuthError.OperationNotAllowed) {
+          console.log('operation not allowed');
+        }
+
+        if (error.code === AuthError.WeakPassword) {
+          console.log('weak password');
+        }
+
         console.error(error);
       });
   };

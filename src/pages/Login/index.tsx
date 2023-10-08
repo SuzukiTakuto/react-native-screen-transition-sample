@@ -32,12 +32,20 @@ export const LoginPage: FC<Props> = ({navigation}) => {
         navigation.push('HomePage');
       })
       .catch(error => {
-        if (error.code === AuthError.EmailAlreadyInUse) {
-          console.log('That email address is already in use!');
+        if (error.code === AuthError.InvalidEmail) {
+          console.log('invalid email');
         }
 
-        if (error.code === AuthError.InvalidEmail) {
-          console.log('That email address is invalid!');
+        if (error.code === AuthError.UserDisabled) {
+          console.log('user disabled');
+        }
+
+        if (error.code === AuthError.UserNotFound) {
+          console.log('user not found');
+        }
+
+        if (error.code === AuthError.WrongPassword) {
+          console.log('wrong password');
         }
 
         console.error(error);
