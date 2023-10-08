@@ -8,16 +8,23 @@ import {AuthError} from '../../api/firebase/error';
 
 type Props = NativeStackScreenProps<RootRoutesParamList, 'LoginPage'>;
 export const LoginPage: FC<Props> = ({navigation}) => {
-  useEffect(() => {}, []);
+  const [isInitializedFirebase, setIsInitializedFirebase] = useState(false);
 
-  const [email, onChangeEmail] = useState('');
-  const [password, onChangePassword] = useState('');
+  // 初回描画時にFirebase初期化
+  useEffect(() => {
+    const initFirebase = async () => {
+      await initializeFirebase();
+      setIsInitializedFirebase(true);
+    };
+
+    initFirebase();
+  }, []);
+
+  // テスト用アカウント情報を標準値として設定
+  const [email, onChangeEmail] = useState('hoge@gmail.com');
+  const [password, onChangePassword] = useState('hogehoge');
 
   const FirebaseAuth = async () => {
-    // ホーム画面で初期化しても良いかもだけど
-    // 簡易的にログイン・ボタン押下時に初期化する
-    await initializeFirebase();
-
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
@@ -38,11 +45,13 @@ export const LoginPage: FC<Props> = ({navigation}) => {
   };
 
   return (
-    <View>
-      <Text>LOGIN</Text>
-      <TextInput onChangeText={onChangeEmail} value={email} />
-      <TextInput onChangeText={onChangePassword} value={password} />
-      <Button onPress={FirebaseAuth} title="Login" />
-    </View>
+    isInitializedFirebase && (
+      <View>
+        <Text>LOGIN</Text>
+        <TextInput onChangeText={onChangeEmail} value={email} />
+        <TextInput onChangeText={onChangePassword} value={password} />
+        <Button onPress={FirebaseAuth} title="Login" />
+      </View>
+    )
   );
 };
