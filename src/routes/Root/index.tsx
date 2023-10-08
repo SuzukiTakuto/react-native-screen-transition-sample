@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SettingsPage} from '../../pages/Settings';
 import {HomePage} from '../../pages/Home';
 import {LoginPage} from '../../pages/Login';
+import {SignUpPage} from '../../pages/SignUp';
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>();
 
@@ -10,6 +11,7 @@ export type RootRoutesParamList = {
   HomePage: undefined;
   DetailPage: undefined;
   LoginPage: undefined;
+  SignUpPage: undefined;
 };
 
 export const RootRoutes = () => {
@@ -29,6 +31,11 @@ export const RootRoutes = () => {
         component={LoginPage}
         name="LoginPage"
         options={{title: 'Detail'}}
+      />
+      <Stack.Screen
+        component={SignUpPage}
+        name="SignUpPage"
+        options={{title: 'SignUp'}}
       />
     </Stack.Navigator>
   );
