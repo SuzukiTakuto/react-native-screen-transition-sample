@@ -12,10 +12,8 @@ export const HomePage: FC<Props> = ({navigation}) => {
         onPress={() => navigation.push('DetailPage')}
         title="Settings page"
       />
-      <Button
-        onPress={() => navigation.push('LoginPage')}
-        title="Settings page"
-      />
+      <Button onPress={() => navigation.push('LoginPage')} title="Login" />
+      <Button onPress={() => navigation.push('ChatPage')} title="Chat" />
     </>
   );
 };
