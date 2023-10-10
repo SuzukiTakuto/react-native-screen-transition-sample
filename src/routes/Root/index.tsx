@@ -2,10 +2,10 @@ import React from "react"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { SettingsPage } from "../../pages/Settings"
 import { HomePage } from "../../pages/Home"
-import VoiceChatPage from "../../pages/VoiceChat"
 import { LoginPage } from "../../pages/Login"
 import { SignUpPage } from "../../pages/SignUp"
 import { ChatPage } from "../../pages/Chat"
+import VoiceChatPage from '../../pages/VoiceChat'
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>()
 
