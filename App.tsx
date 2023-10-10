@@ -5,13 +5,13 @@
  * @format
  */
 
-import {RootRoutes} from './src/routes/Root';
-import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
-import {StatusBar, useColorScheme} from 'react-native';
+import React from 'react'
+import { RootRoutes } from './src/routes/Root'
+import { NavigationContainer } from '@react-navigation/native'
+import { StatusBar, useColorScheme } from 'react-native'
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === 'dark'
 
   return (
     <NavigationContainer>
@@ -21,7 +21,7 @@ function App(): JSX.Element {
       />
       <RootRoutes />
     </NavigationContainer>
-  );
+  )
 }
 
-export default App;
+export default App
