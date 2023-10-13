@@ -6,6 +6,7 @@ import { LoginPage } from "../../pages/Login"
 import { SignUpPage } from "../../pages/SignUp"
 import { ChatPage } from "../../pages/Chat"
 import VoiceChatPage from "../../pages/VoiceChat"
+import Agora from "../../pages/Agora"
 import { EventRoomPage } from "../../pages/EventRoom"
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>()
@@ -17,6 +18,7 @@ export type RootRoutesParamList = {
   SignUpPage: undefined
   ChatPage: undefined
   VoiceChatPage: undefined
+  Agora: undefined
   EventRoomPage: undefined
 }
 
@@ -52,6 +54,11 @@ export const RootRoutes = () => {
         component={ChatPage}
         name="ChatPage"
         options={{ title: "Chat" }}
+      />
+      <Stack.Screen
+        component={Agora}
+        name="Agora"
+        options={{ title: "Agora" }}
       />
       <Stack.Screen
         component={EventRoomPage}
