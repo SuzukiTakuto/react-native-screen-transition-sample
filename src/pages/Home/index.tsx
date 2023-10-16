@@ -18,10 +18,12 @@ export const HomePage: FC<Props> = ({ navigation }) => {
       />
       <Button onPress={() => navigation.push("LoginPage")} title="Login" />
       <Button onPress={() => navigation.push("ChatPage")} title="Chat" />
+      <Button onPress={() => navigation.push("Agora")} title="Agora" />
       <Button
         onPress={() => navigation.push("EventRoomPage")}
         title="EventRoom"
       />
+      <Button onPress={() => navigation.push("Agora")} title="Agora" />
     </>
   )
 }
