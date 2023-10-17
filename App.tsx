@@ -5,19 +5,19 @@
  * @format
  */
 
-import React from 'react'
-import { RootRoutes } from './src/routes/Root'
-import { NavigationContainer } from '@react-navigation/native'
-import { StatusBar, useColorScheme } from 'react-native'
+import React from "react"
+import { RootRoutes } from "./src/routes/Root"
+import { NavigationContainer } from "@react-navigation/native"
+import { StatusBar, useColorScheme } from "react-native"
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
+  const isDarkMode = useColorScheme() === "dark"
 
   return (
     <NavigationContainer>
       <StatusBar
-        backgroundColor={'#fff'}
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        backgroundColor={"#fff"}
+        barStyle={isDarkMode ? "light-content" : "dark-content"}
       />
       <RootRoutes />
     </NavigationContainer>
