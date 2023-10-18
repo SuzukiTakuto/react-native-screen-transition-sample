@@ -1,5 +1,5 @@
 import React from "react"
-import { Image, ScrollView, Text, View } from "react-native"
+import { ScrollView, Text, View } from "react-native"
 import { Props as ContainerProps } from "./index"
 import styles from "./style"
 import InteractiveCircularIcon from "../InteractiveCircularIcon"

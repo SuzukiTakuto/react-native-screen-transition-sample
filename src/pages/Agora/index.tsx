@@ -17,7 +17,7 @@ type Props = NativeStackScreenProps<RootRoutesParamList, "Agora">
 const appId = "f414351ba24f42deab25547937b7c797"
 const channelName = "test"
 const token =
-  "007eJxTYNA02+WW7aR0deJet5WHf10WjsuVDKrmeitosGy9clCR6EYFhjQTQxNjU8OkRCOTNBOjlNTEJCNTUxNzS2PzJPNkc0tzy2PaqQ2BjAz/BKQZGRkgEMRnYShJLS5hYAAAmYccmg=="
+  "007eJxTYOi4+7Z4O1P1EZ+DanyS51YdnHxsxzvP6R+8J3zZ+UQmK81CgSHNxNDE2NQwKdHIJM3EKCU1McnI1NTE3NLYPMk82dzS3HqafmpDICPD3sx2BkYoBPFZGEpSi0sYGADdpCDU"
 const uid = 1
 
 const Agora: React.FC<Props> = () => {
