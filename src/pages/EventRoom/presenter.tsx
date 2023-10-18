@@ -3,6 +3,7 @@ import { View, ScrollView } from "react-native"
 import { colorCode } from "../../styles/general"
 import InteractiveCircularIcon from "../../components/generics/InteractiveCircularIcon"
 import Tabbar from "../../components/generics/Tabbar"
+import IconScroll from "../../components/generics/IconScroll.tsx"
 
 type Props = {}
 
@@ -15,15 +16,7 @@ const EventRoomPresenter: React.FC<Props> = ({}) => {
         }}
       >
         <ScrollView horizontal style={{ backgroundColor: "black" }}>
-          {[0, 1, 2, 3, 4, 5].map((i) => {
-            return (
-              <InteractiveCircularIcon
-                key={i}
-                url={{ image: require("./yamashita.png") }}
-                name={"yamashita"}
-              />
-            )
-          })}
+          <IconScroll />
         </ScrollView>
         <Tabbar />
       </View>
