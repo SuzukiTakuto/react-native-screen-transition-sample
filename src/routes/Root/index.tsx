@@ -5,7 +5,6 @@ import { HomePage } from "../../pages/Home"
 import { LoginPage } from "../../pages/Login"
 import { SignUpPage } from "../../pages/SignUp"
 import { ChatPage } from "../../pages/Chat"
-import VoiceChatPage from "../../pages/VoiceChat"
 import Agora from "../../pages/Agora"
 import { EventRoomPage } from "../../pages/EventRoom"
 import ScenarioSelectionPage from "../../pages/ScenarioSelection"
@@ -36,11 +35,6 @@ export const RootRoutes = () => {
         component={SettingsPage}
         name="DetailPage"
         options={{ title: "Detail" }}
-      />
-      <Stack.Screen
-        component={VoiceChatPage}
-        name="VoiceChatPage"
-        options={{ title: "VoiceChat" }}
       />
       <Stack.Screen
         component={LoginPage}
