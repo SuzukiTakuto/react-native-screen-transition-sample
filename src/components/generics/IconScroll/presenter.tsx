@@ -1,8 +1,8 @@
 import React from "react"
-import { Image, ScrollView, Text, View } from "react-native"
-import { Props as ContainerProps } from "./index"
+import { ScrollView, Text, View } from "react-native"
 import styles from "./style"
 import InteractiveCircularIcon from "../InteractiveCircularIcon"
+import { Props as ContainerProps } from "./index"
 
 type Props = {
   url: any
