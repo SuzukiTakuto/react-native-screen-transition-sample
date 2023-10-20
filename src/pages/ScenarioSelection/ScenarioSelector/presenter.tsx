@@ -5,9 +5,10 @@ import ScenarioItem from "../ScenarioItem"
 
 type Props = {
   title: string
+  navigation: any
 }
 
-const ScenarioSelectorPresenter = ({ title }: Props) => {
+const ScenarioSelectorPresenter = ({ title, navigation }: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.topHeader}>
@@ -27,6 +28,7 @@ const ScenarioSelectorPresenter = ({ title }: Props) => {
               rating={4}
               numberOfPeople={3}
               timeLimit={1}
+              navigation={navigation}
             />
           )
         })}
