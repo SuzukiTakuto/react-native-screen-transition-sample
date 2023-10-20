@@ -7,6 +7,7 @@ type Props = {
   rating: number
   numberOfPeople: number
   timeLimit: number
+  navigation: any
 }
 
 const ScenarioItem = ({
@@ -14,7 +15,8 @@ const ScenarioItem = ({
   title,
   rating,
   numberOfPeople,
-  timeLimit
+  timeLimit,
+  navigation
 }: Props) => {
   function decimalToHoursAndMinutes(decimalTime: number): string {
     const hours = Math.floor(decimalTime)
@@ -26,13 +28,27 @@ const ScenarioItem = ({
       return `${hours}時間${minutes}分`
     }
   }
+
+  const formattedTimeLimit = decimalToHoursAndMinutes(timeLimit)
+
+  const onClick = () => {
+    navigation.navigate("ScenarioDetailsPage", {
+      thumbnail,
+      title,
+      rating,
+      numberOfPeople,
+      timeLimit: formattedTimeLimit
+    })
+  }
+
   return (
     <ScenarioItemPresenter
       thumbnail={thumbnail}
       title={title}
       rating={rating}
       numberOfPeople={numberOfPeople}
-      timeLimit={decimalToHoursAndMinutes(timeLimit)}
+      timeLimit={formattedTimeLimit}
+      onClick={onClick}
     />
   )
 }
