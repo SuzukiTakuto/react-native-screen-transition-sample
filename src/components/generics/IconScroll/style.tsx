@@ -2,7 +2,9 @@ import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50
+    paddingBottom: 8,
+    paddingTop: 8,
+    backgroundColor: "black"
   },
   bigBlue: {
     color: "blue",

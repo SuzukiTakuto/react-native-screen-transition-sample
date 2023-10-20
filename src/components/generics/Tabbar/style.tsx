@@ -3,13 +3,13 @@ import { colorCode } from "../../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     backgroundColor: "#000000",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     paddingTop: 7,
-    paddingBottom: 31
+    paddingBottom: 31,
+    height: 80
   },
   bigBlue: {
     color: "blue",

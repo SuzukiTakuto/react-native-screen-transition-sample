@@ -23,7 +23,10 @@ export const HomePage: FC<Props> = ({ navigation }) => {
         onPress={() => navigation.push("EventRoomPage")}
         title="EventRoom"
       />
-      <Button onPress={() => navigation.push("Agora")} title="Agora" />
+      <Button
+        onPress={() => navigation.push("ScenarioSelectionPage")}
+        title="ScenarioSelection"
+      />
     </>
   )
 }

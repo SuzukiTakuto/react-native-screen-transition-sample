@@ -8,6 +8,7 @@ import { ChatPage } from "../../pages/Chat"
 import VoiceChatPage from "../../pages/VoiceChat"
 import Agora from "../../pages/Agora"
 import { EventRoomPage } from "../../pages/EventRoom"
+import ScenarioSelectionPage from "../../pages/ScenarioSelection"
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>()
 
@@ -20,6 +21,7 @@ export type RootRoutesParamList = {
   VoiceChatPage: undefined
   Agora: undefined
   EventRoomPage: undefined
+  ScenarioSelectionPage: undefined
 }
 
 export const RootRoutes = () => {
@@ -64,6 +66,11 @@ export const RootRoutes = () => {
         component={EventRoomPage}
         name="EventRoomPage"
         options={{ title: "EventRoom" }}
+      />
+      <Stack.Screen
+        component={ScenarioSelectionPage}
+        name="ScenarioSelectionPage"
+        options={{ title: "ScenarioSelection" }}
       />
     </Stack.Navigator>
   )

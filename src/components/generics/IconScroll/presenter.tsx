@@ -11,7 +11,7 @@ type Props = {
 const IconScrollPresenter = () => {
   return (
     <View style={styles.container}>
-      <ScrollView horizontal style={{ backgroundColor: "black" }}>
+      <ScrollView horizontal>
         {[0, 1, 2, 3, 4, 5].map((i) => {
           return (
             <InteractiveCircularIcon

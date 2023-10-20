@@ -59,5 +59,9 @@
 	<false/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone permission description</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesome.ttf</string>
+	</array>
 </dict>
 </plist>
