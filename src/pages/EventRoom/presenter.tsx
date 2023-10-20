@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React from "react"
 import { View, ScrollView } from "react-native"
 import { colorCode } from "../../styles/general"
 import InteractiveCircularIcon from "../../components/generics/InteractiveCircularIcon"

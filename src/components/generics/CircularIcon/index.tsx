@@ -3,10 +3,11 @@ import CircularIconPresenter from "./presenter"
 
 type Props = {
   url: any
+  styles?: any
 }
 
-const CircularIcon = ({ url }: Props) => {
-  return <CircularIconPresenter url={url} />
+const CircularIcon = ({ url, styles }: Props) => {
+  return <CircularIconPresenter url={url} styles={styles} />
 }
 
 export default CircularIcon
