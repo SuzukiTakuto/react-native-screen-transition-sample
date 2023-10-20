@@ -4,7 +4,7 @@ import Tabbar from "../../components/generics/Tabbar"
 import { ScrollView, View } from "react-native"
 import TopHeader from "./TopHeader"
 import styles from "./style"
-import SearchBar from "./SearchBar.tsx"
+import SearchBar from "./SearchBar"
 import ScenarioSelector from "./ScenarioSelector"
 
 const ScenarioSelectionPresenter = () => {
