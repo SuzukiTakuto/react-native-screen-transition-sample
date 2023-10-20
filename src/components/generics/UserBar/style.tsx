@@ -9,9 +9,6 @@ const styles = StyleSheet.create({
     borderColor: colorCode.border,
     borderWidth: 0.5
   },
-  red: {
-    color: "red"
-  },
   icon: {
     marginLeft: 20,
     marginRight: 20,

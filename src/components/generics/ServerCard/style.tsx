@@ -3,29 +3,34 @@ import { colorCode } from "../../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    marginTop: 30,
     marginHorizontal: 20,
     backgroundColor: colorCode.secondlyBackground,
     borderRadius: 10,
     paddingBottom: 10
   },
-  headerText: {
+  header: {
     marginTop: 15,
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  headerText: {
     color: "white",
     fontWeight: "bold",
     fontSize: 20,
     marginLeft: 20
   },
+  headerButton: {
+    marginLeft: 60,
+    marginRight: 16
+  },
   subText: {
     color: "#898F99",
     fontWeight: "bold",
     fontSize: 15,
-    marginVertical: 5,
+    marginBottom: 10,
     marginLeft: 20
   },
-  red: {
-    color: "red"
-  }
 })
 
 export default styles

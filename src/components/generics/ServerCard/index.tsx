@@ -2,18 +2,18 @@ import React from "react"
 import ServerCardPresenter from "./presenter"
 
 export type Props = {
-  test: string
   serverName: string
   serverId: string
+  userList: string[]
 }
 
-const ServerCard = ({ test, serverName }: Props) => {
+const ServerCard = ({ serverName, serverId, userList }: Props) => {
   return (
     <ServerCardPresenter
-      test={test}
       url={undefined}
       serverName={serverName}
-      serverId={""}
+      serverId={serverId}
+      userList={userList}
     />
   )
 }
