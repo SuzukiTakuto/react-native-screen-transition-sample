@@ -17,7 +17,6 @@ export const HomePage: FC<Props> = ({ navigation }) => {
         title="VoiceChat page"
       />
       <Button onPress={() => navigation.push("LoginPage")} title="Login" />
-      <Button onPress={() => navigation.push("ChatPage")} title="Chat" />
       <Button onPress={() => navigation.push("Agora")} title="Agora" />
       <Button
         onPress={() => navigation.push("EventRoomPage")}
@@ -26,6 +25,11 @@ export const HomePage: FC<Props> = ({ navigation }) => {
       <Button
         onPress={() => navigation.push("ScenarioSelectionPage")}
         title="ScenarioSelection"
+      />
+      <Button onPress={() => navigation.push("Agora")} title="Agora" />
+      <Button
+        onPress={() => navigation.push("ServerSelect")}
+        title="ServerSelect"
       />
     </>
   )

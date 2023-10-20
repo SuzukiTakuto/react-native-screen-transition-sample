@@ -4,10 +4,12 @@ import styles from "./style"
 
 type Props = {
   url: any
+  styles: any
 }
 
-const CircularIconPresenter = ({ url }: Props) => {
-  return <Image source={url.image} style={styles.circularImage} />
+const CircularIconPresenter = (props: Props) => {
+  console.log({...styles.circularImage, styles})
+  return <Image source={props.url.image} style={[styles.circularImage, props.styles]} />
 }
 
 export default CircularIconPresenter

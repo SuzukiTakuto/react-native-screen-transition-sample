@@ -6,13 +6,18 @@ import TopHeader from "./TopHeader"
 import styles from "./style"
 import SearchBar from "./SearchBar"
 import ScenarioSelector from "./ScenarioSelector"
+import PurpleButton from "../../components/generics/PurpleButton"
 
 const ScenarioSelectionPresenter = () => {
   return (
     <View style={{ flex: 1 }}>
       <TopHeader />
       <IconScroll />
-      <SearchBar />
+
+      <View style={styles.searchBarContainer}>
+        <SearchBar />
+        <PurpleButton title={"絞り込み"} style={styles.purpleButton}></PurpleButton>
+      </View>
 
       <ScrollView style={styles.container}>
         <ScenarioSelector title="メンバー募集中のシナリオ" />
