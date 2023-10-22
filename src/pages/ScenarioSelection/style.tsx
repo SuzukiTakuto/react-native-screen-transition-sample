@@ -3,12 +3,15 @@ import { colorCode, staticSizeValue } from "../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colorCode.primaryBackground
+    backgroundColor: colorCode.primaryBackground,
+    paddingHorizontal: 16
   },
   searchBarContainer: {
     backgroundColor: colorCode.primaryBackground,
     flexDirection: "row",
-    alignItems: "center"
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 16
   },
   purpleButton: {
     marginLeft: 20

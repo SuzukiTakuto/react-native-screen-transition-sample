@@ -4,7 +4,6 @@ import { colorCode } from "../../../styles/general"
 const styles = StyleSheet.create({
   container: {
     marginTop: 30,
-    marginHorizontal: 20,
     backgroundColor: colorCode.secondlyBackground,
     borderRadius: 10,
     paddingBottom: 10
@@ -12,6 +11,7 @@ const styles = StyleSheet.create({
   header: {
     marginTop: 15,
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center"
   },
   headerText: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: 10,
     marginLeft: 20
-  },
+  }
 })
 
 export default styles

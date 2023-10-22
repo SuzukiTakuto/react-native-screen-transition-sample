@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Image, Text } from "react-native"
+import { View, Image, Text, Pressable } from "react-native"
 import styles from "./style"
 import Evaluation from "../Evaluation"
 
@@ -9,6 +9,7 @@ type Props = {
   rating: number
   numberOfPeople: number
   timeLimit: string
+  onClick: () => void
 }
 
 const ScenarioItemPresenter = ({
@@ -16,10 +17,11 @@ const ScenarioItemPresenter = ({
   title,
   rating,
   numberOfPeople,
-  timeLimit
+  timeLimit,
+  onClick
 }: Props) => {
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={onClick}>
       <Image source={thumbnail} style={styles.thumbnail} />
       <Text style={styles.title}>{title}</Text>
       <View style={styles.evaluation}>
@@ -30,7 +32,7 @@ const ScenarioItemPresenter = ({
         <Text style={styles.infoText}>{numberOfPeople}人/</Text>
         <Text style={styles.infoText}>{timeLimit}</Text>
       </View>
-    </View>
+    </Pressable>
   )
 }
 

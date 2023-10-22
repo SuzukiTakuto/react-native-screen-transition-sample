@@ -3,7 +3,8 @@ import { colorCode } from "../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colorCode.primaryBackground
+    backgroundColor: colorCode.primaryBackground,
+    paddingHorizontal: 20
   }
 })
 

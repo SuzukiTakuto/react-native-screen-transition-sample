@@ -8,6 +8,7 @@ import { ChatPage } from "../../pages/Chat"
 import Agora from "../../pages/Agora"
 import { EventRoomPage } from "../../pages/EventRoom"
 import ScenarioSelectionPage from "../../pages/ScenarioSelection"
+import ScenarioDetailsPage from "../../pages/ScenarioDetails"
 import { ServerSelectPage } from "../../pages/ServerSelect"
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>()
@@ -22,6 +23,13 @@ export type RootRoutesParamList = {
   Agora: undefined
   EventRoomPage: undefined
   ScenarioSelectionPage: undefined
+  ScenarioDetailsPage: {
+    thumbnail: any
+    title: string
+    rating: number
+    numberOfPeople: number
+    timeLimit: string
+  }
   ServerSelect: undefined
 }
 
@@ -67,6 +75,11 @@ export const RootRoutes = () => {
         component={ScenarioSelectionPage}
         name="ScenarioSelectionPage"
         options={{ title: "ScenarioSelection" }}
+      />
+      <Stack.Screen
+        component={ScenarioDetailsPage}
+        name="ScenarioDetailsPage"
+        options={{ title: "ScenarioDetails" }}
       />
       <Stack.Screen
         component={ServerSelectPage}

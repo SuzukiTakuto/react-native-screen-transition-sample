@@ -3,10 +3,7 @@ import { colorCode, staticSizeValue } from "../../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colorCode.primaryBackground,
-    padding: 16,
-    flexDirection: "row",
-    justifyContent: "space-between"
+    backgroundColor: colorCode.primaryBackground
   },
   inputContainer: {
     flexDirection: "row",
@@ -21,6 +18,9 @@ const styles = StyleSheet.create({
     fontSize: 13,
     paddingLeft: 6,
     color: "#fff"
+  },
+  purpleButton: {
+    marginLeft: 20
   }
 })
 

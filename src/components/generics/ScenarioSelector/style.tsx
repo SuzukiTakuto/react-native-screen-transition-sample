@@ -3,9 +3,10 @@ import { colorCode, staticSizeValue } from "../../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    margin: 16,
+    margin: 0,
     borderBottomWidth: 1,
-    borderBottomColor: "#6b6c78"
+    borderBottomColor: "#6b6c78",
+    paddingTop: 24
   },
   title: {
     fontSize: 20,
