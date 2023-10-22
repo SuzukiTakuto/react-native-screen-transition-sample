@@ -1,7 +1,7 @@
 import React from "react"
 import { View, Image, Text, Pressable } from "react-native"
 import styles from "./style"
-import Evaluation from "../../../components/generics/Evaluation"
+import Evaluation from "../Evaluation"
 
 type Props = {
   thumbnail: any

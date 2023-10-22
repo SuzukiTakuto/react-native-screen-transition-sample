@@ -3,15 +3,14 @@ import { colorCode, staticSizeValue } from "../../styles/general"
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colorCode.primaryBackground
+    paddingHorizontal: 16
   },
   image: {
     width: "100%"
   },
   card: {
-    paddingTop: 24,
-    paddingBottom: 24,
-    paddingLeft: 16
+    paddingLeft: 16,
+    paddingVertical: 24
   },
   title: {
     fontSize: 16,
@@ -35,6 +34,69 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 13,
     color: "#DADEE1"
+  },
+  authorContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 24,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: "#6b6c78"
+  },
+  author: {
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  authorName: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#ffffff",
+    marginLeft: 8
+  },
+  authorIcon: {
+    width: 32,
+    height: 32
+  },
+  purpleButton: {},
+  outline: {
+    paddingVertical: 24
+  },
+  outlineText: {
+    fontSize: 13,
+    color: "#ffffff"
+  },
+  characterCardContainer: {},
+  charcterCard: {
+    paddingBottom: 16
+  },
+  scenarioFlowContainer: {
+    marginBottom: 24
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#ffffff",
+    paddingBottom: 16
+  },
+  scenarioFlow: {},
+  scenarioFlowText: {
+    fontSize: 13,
+    color: "#ffffff",
+    paddingVertical: 1
+  },
+  serverCard: {
+    marginBottom: 24
+  },
+  primaryButton: {
+    marginBottom: 24
+  },
+  impressionContainer: {
+    borderBottomColor: "#6b6c78",
+    borderBottomWidth: 1
+  },
+  impressionCard: {
+    marginBottom: 24
   }
 })
 

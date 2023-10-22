@@ -6,7 +6,7 @@ import styles from "./style"
 export const ServerSelectPagePresenter = () => {
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container}>
+      <ScrollView>
         <ServerCard
           test={""}
           serverName={"yamashita"}

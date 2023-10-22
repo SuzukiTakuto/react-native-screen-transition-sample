@@ -5,6 +5,13 @@ import IconScroll from "../../components/generics/IconScroll"
 import Tabbar from "../../components/generics/Tabbar"
 import Evaluation from "../../components/generics/Evaluation"
 import styles from "./style"
+import PurpleButton from "../../components/generics/PurpleButton"
+import CharacterCard from "../../components/generics/CharacterCard"
+import PrimaryButton from "../../components/generics/PrimaryButton"
+import ImpressionCard from "./impressionCard"
+import ScenarioSelector from "../../components/generics/ScenarioSelector"
+import ServerCard from "../../components/generics/ServerCard"
+import { colorCode } from "../../styles/general"
 
 type Props = {
   thumbnail: any
@@ -14,6 +21,23 @@ type Props = {
   timeLimit: string
   author: string
   authorIcon: any
+  outline: string
+  characters: {
+    icon: any
+    nameKanji: string
+    nameKana: string
+    age: number
+    profession: string
+    description: string
+  }[]
+  scenarioFlow: string[]
+  impressions: {
+    icon: any
+    name: string
+    comment: string
+  }[]
+  isCapacity: boolean
+  navigation: any
 }
 
 const ScenarioDetailsPresenter: FC<Props> = ({
@@ -21,29 +45,120 @@ const ScenarioDetailsPresenter: FC<Props> = ({
   title,
   rating,
   numberOfPeople,
-  timeLimit
+  timeLimit,
+  author,
+  authorIcon,
+  outline,
+  characters,
+  scenarioFlow,
+  impressions,
+  isCapacity,
+  navigation
 }) => {
   return (
     <View style={{ flex: 1 }}>
       <TopHeader />
       <IconScroll />
 
-      <ScrollView style={styles.container}>
+      <ScrollView style={{ backgroundColor: colorCode.primaryBackground }}>
         <Image source={thumbnail} style={styles.image} />
 
-        <View style={styles.card}>
-          <Text style={styles.title}>{title}</Text>
-          <View style={styles.evaluation}>
-            <Text style={styles.rating}>{rating.toFixed(1)}</Text>
-            <Evaluation rating={rating} />
+        <View style={styles.container}>
+          <View style={styles.card}>
+            <Text style={styles.title}>{title}</Text>
+            <View style={styles.evaluation}>
+              <Text style={styles.rating}>{rating.toFixed(1)}</Text>
+              <Evaluation rating={rating} />
+            </View>
+            <View style={styles.info}>
+              <Text style={styles.infoText}>{numberOfPeople}人/</Text>
+              <Text style={styles.infoText}>{timeLimit}</Text>
+            </View>
           </View>
-          <View style={styles.info}>
-            <Text style={styles.infoText}>{numberOfPeople}人/</Text>
-            <Text style={styles.infoText}>{timeLimit}</Text>
+
+          <View style={styles.authorContainer}>
+            <View style={styles.author}>
+              <Image source={authorIcon} style={styles.authorIcon} />
+              <Text style={styles.authorName}>{author}</Text>
+            </View>
+            <PurpleButton
+              title={"お気に入り"}
+              style={styles.purpleButton}
+            ></PurpleButton>
+          </View>
+
+          <View style={styles.outline}>
+            <Text style={styles.outlineText}>{outline}</Text>
+          </View>
+
+          <View style={styles.characterCardContainer}>
+            {characters.map((character, i) => {
+              return (
+                <View style={styles.charcterCard}>
+                  <CharacterCard key={i} character={character} />
+                </View>
+              )
+            })}
+          </View>
+
+          <View style={styles.scenarioFlowContainer}>
+            <Text style={styles.sectionTitle}>シナリオの流れ</Text>
+            {scenarioFlow.map((flow, i) => {
+              return (
+                <View style={styles.scenarioFlow}>
+                  <Text style={styles.scenarioFlowText}>・{flow}</Text>
+                </View>
+              )
+            })}
+          </View>
+
+          {isCapacity ? (
+            <View style={styles.primaryButton}>
+              <PrimaryButton
+                onPress={() => console.log("Button pressed")}
+                text={"今すぐあそぶ"}
+              />
+            </View>
+          ) : (
+            <View>
+              <View style={styles.serverCard}>
+                <ServerCard
+                  serverName={"yama"}
+                  serverId={"0801"}
+                  userList={[
+                    "yamashita",
+                    "yamashita",
+                    "yamashita",
+                    "yamashita",
+                    "yamashita",
+                    "yamashita"
+                  ]}
+                />
+              </View>
+              <View style={styles.primaryButton}>
+                <PrimaryButton
+                  onPress={() => console.log("Button pressed")}
+                  text={"だれかを募集してあそぶ"}
+                />
+              </View>
+            </View>
+          )}
+
+          <View style={styles.impressionContainer}>
+            <Text style={styles.sectionTitle}>シナリオの感想</Text>
+            {impressions.map((impression, i) => {
+              return (
+                <View style={styles.impressionCard}>
+                  <ImpressionCard key={i} props={impression} />
+                </View>
+              )
+            })}
+          </View>
+
+          <View>
+            <ScenarioSelector title="製作者の作品" navigation={navigation} />
           </View>
         </View>
-
-        <View></View>
       </ScrollView>
 
       <Tabbar />
