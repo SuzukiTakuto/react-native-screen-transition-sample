@@ -5,7 +5,11 @@ import { RootRoutesParamList } from "../../routes/Root"
 
 type Props = NativeStackScreenProps<RootRoutesParamList, "ScenarioDetailsPage">
 const ScenarioDetails: FC<Props> = ({ navigation, route }) => {
-  const [isCapacity, setIsCapacity] = useState(false)
+  const [isCapacity, setIsCapacity] = useState(true)
+
+  const nowPlay = () => {
+    navigation.navigate("GamePage")
+  }
 
   // 実際はここでサーバーからauthorやauthorIconなど必要情報を取得する
   const author = "ぼぐちゃ"
@@ -83,7 +87,8 @@ const ScenarioDetails: FC<Props> = ({ navigation, route }) => {
     impressions,
     isCapacity,
     setIsCapacity,
-    navigation
+    navigation,
+    nowPlay
   }
   return <ScenarioDetailsPresenter {...props} />
 }

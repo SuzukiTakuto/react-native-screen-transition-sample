@@ -8,13 +8,14 @@
 import React from "react"
 import { RootRoutes } from "./src/routes/Root"
 import { NavigationContainer } from "@react-navigation/native"
-import { StatusBar, useColorScheme } from "react-native"
+import { SafeAreaView, StatusBar, useColorScheme } from "react-native"
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === "dark"
 
   return (
     <NavigationContainer>
+      <SafeAreaView style={{ backgroundColor: "#000" }} />
       <StatusBar
         backgroundColor={"#fff"}
         barStyle={isDarkMode ? "light-content" : "dark-content"}

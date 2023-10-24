@@ -35,7 +35,7 @@ const ScenarioSelectionPresenter = ({ navigation }: Props) => {
         <ScenarioSelector title="ランキング" navigation={navigation} />
       </ScrollView>
 
-      <Tabbar />
+      <Tabbar isGame={false} />
     </View>
   )
 }
