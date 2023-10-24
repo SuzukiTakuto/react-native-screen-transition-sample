@@ -18,7 +18,7 @@ const EventRoomPresenter: React.FC<Props> = ({}) => {
         <ScrollView horizontal style={{ backgroundColor: "black" }}>
           <IconScroll />
         </ScrollView>
-        <Tabbar />
+        <Tabbar isGame={false} />
       </View>
     </>
   )

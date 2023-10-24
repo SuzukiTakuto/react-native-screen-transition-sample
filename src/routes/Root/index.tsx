@@ -10,6 +10,7 @@ import { EventRoomPage } from "../../pages/EventRoom"
 import ScenarioSelectionPage from "../../pages/ScenarioSelection"
 import ScenarioDetailsPage from "../../pages/ScenarioDetails"
 import { ServerSelectPage } from "../../pages/ServerSelect"
+import GamePage from "../../pages/Game"
 
 const Stack = createNativeStackNavigator<RootRoutesParamList>()
 
@@ -31,11 +32,18 @@ export type RootRoutesParamList = {
     timeLimit: string
   }
   ServerSelect: undefined
+  GamePage: undefined
 }
 
 export const RootRoutes = () => {
   return (
+    // screenOptions={{headerShown: false}}
     <Stack.Navigator>
+      <Stack.Screen
+        component={ServerSelectPage}
+        name="ServerSelect"
+        options={{ title: "ServerSelect" }}
+      />
       <Stack.Screen
         component={HomePage}
         name="HomePage"
@@ -81,10 +89,11 @@ export const RootRoutes = () => {
         name="ScenarioDetailsPage"
         options={{ title: "ScenarioDetails" }}
       />
+
       <Stack.Screen
-        component={ServerSelectPage}
-        name="ServerSelect"
-        options={{ title: "ServerSelect" }}
+        component={GamePage}
+        name="GamePage"
+        options={{ title: "Game" }}
       />
     </Stack.Navigator>
   )

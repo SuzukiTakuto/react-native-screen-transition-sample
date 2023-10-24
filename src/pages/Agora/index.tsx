@@ -15,10 +15,10 @@ import { RootRoutesParamList } from "../../routes/Root"
 type Props = NativeStackScreenProps<RootRoutesParamList, "Agora">
 
 const appId = "f414351ba24f42deab25547937b7c797"
-const channelName = "test"
+const channelName = "test" // rustサーバーから受け取るroomIDにする
 const token =
   "007eJxTYOi4+7Z4O1P1EZ+DanyS51YdnHxsxzvP6R+8J3zZ+UQmK81CgSHNxNDE2NQwKdHIJM3EKCU1McnI1NTE3NLYPMk82dzS3HqafmpDICPD3sx2BkYoBPFZGEpSi0sYGADdpCDU"
-const uid = 1
+const uid = 1 // rustサーバーから受け取るuserIDにする
 
 const Agora: React.FC<Props> = () => {
   const agoraEngineRef = useRef<IRtcEngine>() // Agora engine instance

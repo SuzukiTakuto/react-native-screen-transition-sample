@@ -66,10 +66,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: "#ffffff"
   },
-  characterCardContainer: {},
-  charcterCard: {
-    paddingBottom: 16
-  },
   scenarioFlowContainer: {
     marginBottom: 24
   },

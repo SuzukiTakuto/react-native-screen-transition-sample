@@ -6,11 +6,12 @@ import styles from "./style"
 type Props = {
   url: any
   style: any
+  onClick?: () => void
 } & ContainerProps
 
-const PurpleButtonPresenter = ({ style, title }: Props) => {
+const PurpleButtonPresenter = ({ style, title, onClick }: Props) => {
   return (
-    <TouchableHighlight style={[styles.button, style]}>
+    <TouchableHighlight onPress={onClick} style={[styles.button, style]}>
       <Text style={styles.text}>{title}</Text>
     </TouchableHighlight>
   )

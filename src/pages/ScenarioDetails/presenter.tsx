@@ -12,6 +12,7 @@ import ImpressionCard from "./impressionCard"
 import ScenarioSelector from "../../components/generics/ScenarioSelector"
 import ServerCard from "../../components/generics/ServerCard"
 import { colorCode } from "../../styles/general"
+import Characters from "../../components/generics/Characters"
 
 type Props = {
   thumbnail: any
@@ -38,6 +39,7 @@ type Props = {
   }[]
   isCapacity: boolean
   navigation: any
+  nowPlay: () => void
 }
 
 const ScenarioDetailsPresenter: FC<Props> = ({
@@ -53,7 +55,8 @@ const ScenarioDetailsPresenter: FC<Props> = ({
   scenarioFlow,
   impressions,
   isCapacity,
-  navigation
+  navigation,
+  nowPlay
 }) => {
   return (
     <View style={{ flex: 1 }}>
@@ -91,15 +94,7 @@ const ScenarioDetailsPresenter: FC<Props> = ({
             <Text style={styles.outlineText}>{outline}</Text>
           </View>
 
-          <View style={styles.characterCardContainer}>
-            {characters.map((character, i) => {
-              return (
-                <View style={styles.charcterCard}>
-                  <CharacterCard key={i} character={character} />
-                </View>
-              )
-            })}
-          </View>
+          <Characters characters={characters} />
 
           <View style={styles.scenarioFlowContainer}>
             <Text style={styles.sectionTitle}>シナリオの流れ</Text>
@@ -114,10 +109,7 @@ const ScenarioDetailsPresenter: FC<Props> = ({
 
           {isCapacity ? (
             <View style={styles.primaryButton}>
-              <PrimaryButton
-                onPress={() => console.log("Button pressed")}
-                text={"今すぐあそぶ"}
-              />
+              <PrimaryButton onPress={nowPlay} text={"今すぐあそぶ"} />
             </View>
           ) : (
             <View>
@@ -161,7 +153,7 @@ const ScenarioDetailsPresenter: FC<Props> = ({
         </View>
       </ScrollView>
 
-      <Tabbar />
+      <Tabbar isGame={false} />
     </View>
   )
 }
